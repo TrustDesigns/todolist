@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> To-Do Dashboard</title>
+  <link rel="stylesheet" href="todo.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Structured</h1>
+      <p>Organize your day, achieve your goals</p>
+    </header>
+
+    <div class="stats">
+      <div class="stat-box">
+        <h2>8</h2>
+        <p>Total Tasks</p>
+      </div>
+      <div class="stat-box">
+        <h2>5</h2>
+        <p>Active</p>
+      </div>
+      <div class="stat-box">
+        <h2>3</h2>
+        <p>Completed</p>
+      </div>
+    </div>
+
+    <div class="task-section">
+      <div class="add-task">
+        <input type="text" placeholder="What needs to be done?" />
+        <button>+ Add Task</button>
+      </div>
+
+      <div class="task-tabs">
+        <button class="active">All Tasks</button>
+        <button>Active</button>
+        <button>Completed</button>
+      </div>
+
+      <ul class="task-list">
+        <li>
+          <label><input type="checkbox"> Review pull requests</label>
+          <span class="date">Created: Today 3:00 PM</span>
+          <div class="actions">
+            <button class="edit">✏️</button>
+            <button class="delete">🗑️</button>
+          </div>
+        </li>
+        <li>
+          <label><input type="checkbox"> Complete project documentation</label>
+          <span class="date">Created: Today 1:00 PM</span>
+          <div class="actions">
+            <button class="edit">✏️</button>
+            <button class="delete">🗑️</button>
+          </div>
+        </li>
+        <li class="completed">
+          <label><input type="checkbox" checked> Morning team standup</label>
+          <span class="date">Created: Yesterday 4:00 PM</span>
+          <div class="actions">
+            <button class="edit">✏️</button>
+            <button class="delete">🗑️</button>
+          </div>
+        </li>
+        <li>
+          <label><input type="checkbox"> Prepare presentation slides</label>
+          <span class="date">Created: Friday 4:00 PM</span>
+          <div class="actions">
+            <button class="edit">✏️</button>
+            <button class="delete">🗑️</button>
+          </div>
+        </li>
+        <li>
+          <label><input type="checkbox"> Update client portfolio</label>
+          <span class="date">Created: Tuesday 4:00 PM</span>
+          <div class="actions">
+            <button class="edit">✏️</button>
+            <button class="delete">🗑️</button>
+          </div>
+        </li>
+        <li>
+          <label><input type="checkbox"> Code review for feature branch</label>
+          <span class="date">Created: 2nd Sept 2025</span>
+          <div class="actions">
+            <button class="edit">✏️</button>
+            <button class="delete">🗑️</button>
+          </div>
+        </li>
+        <li class="completed">
+          <label><input type="checkbox" checked> Submit timesheet</label>
+          <span class="date">Created: 1st Sept 2025</span>
+          <div class="actions">
+            <button class="edit">✏️</button>
+            <button class="delete">🗑️</button>
+          </div>
+        </li>
+        <li class="completed">
+          <label><input type="checkbox" checked> Weekly project sync</label>
+          <span class="date">Created: 31st Aug 2025</span>
+          <div class="actions">
+            <button class="edit">✏️</button>
+            <button class="delete">🗑️</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
