@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -14,7 +14,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 .container {
@@ -28,7 +28,7 @@ header {
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   color: #7300ff;
   margin-bottom: 8px;
 }
@@ -47,15 +47,16 @@ header p {
 
 .stat-box {
   background: #1a1a1a;
-  padding: 20px 40px;
+  padding: 20px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(111, 0, 255, 0.2);
+  flex: 1 1 200px;
 }
 
 .stat-box h2 {
   color: #7300ff;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .stat-box p {
@@ -84,6 +85,7 @@ header p {
   outline: none;
   background: #2a2a2a;
   color: #fff;
+  min-width: 0;
 }
 
 .add-task button {
@@ -98,7 +100,7 @@ header p {
 }
 
 .add-task button:hover {
-  background: #7300ff;
+  background: #6200ee;
 }
 
 .task-tabs {
@@ -140,6 +142,8 @@ header p {
   border-radius: 8px;
   margin-bottom: 10px;
   transition: 0.2s;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .task-list li:hover {
@@ -152,6 +156,7 @@ header p {
   align-items: center;
   gap: 10px;
   color: #fff;
+  min-width: 200px;
 }
 
 .task-list input[type="checkbox"] {
@@ -183,7 +188,7 @@ header p {
 }
 
 .actions .delete {
-  color: #ad75f1;
+  color: #ff4d4d;
 }
 
 .completed label {
@@ -191,37 +196,59 @@ header p {
   color: #888;
 }
 
-@media (max-width: 700px) {
-  .stat-box {
-    flex: 1 1 45%;
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
   }
+
+  .stat-box {
+    flex-basis: 100%;
+  }
+
   .add-task {
     flex-direction: column;
   }
+
   .add-task button {
     width: 100%;
   }
-}
-@media (max-width: 500px) {
-  .stat-box {
-    flex: 1 1 100%;
+
+  .task-list li {
+    flex-direction: column;
+    align-items: flex-start;
   }
-}
-@media (max-width: 400px) {
-  .task-tabs button {
-    font-size: 0.85rem;
-    padding: 8px;
-  }
-}
-@media (max-width: 350px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-  .add-task input {
-    padding: 10px;
-  }
+
   .task-list .date {
-    display: none;
+    margin-top: 5px;
+    margin-right: 0;
+  }
+
+  .actions {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-end;
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .task-section {
+    padding: 15px;
+  }
+
+  .task-tabs {
+    flex-direction: column;
+  }
+
+  .task-tabs button {
+    border-radius: 0;
+    border-bottom: 1px solid #333;
+  }
+
+  .task-tabs button:last-child {
+    border-bottom: none;
+  }
+}
